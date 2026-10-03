@@ -69,21 +69,3 @@ Since we are a non-custodial provider, the blockchain acts as the receipt of del
 ## 3. Submit Representment
 Combine the KYC data, IP logs, and On-Chain delivery proof into a single PDF packet and upload it to the payment processor's dispute portal within the 14-day window.
 
-# 🗺️ Block Explorer Quick Reference
-
-A guide for Support Agents on how to read block explorers to answer customer tickets quickly.
-
-## Etherscan (Ethereum / EVM Chains)
-- **Status: Success (Green):** Funds were delivered. The issue is with the user's wallet UI.
-- **Status: Reverted (Red):** The transaction failed on-chain (often due to Out of Gas or Slippage). The fiat must be refunded or the transaction rebroadcast.
-- **Internal Transactions Tab:** Use this tab if the crypto was sent from a smart contract. The transfer will NOT show up on the main "Transactions" list.
-
-## Solscan (Solana)
-- **Finalized vs. Confirmed:** A transaction is only fully immutable once it says `Finalized`. `Confirmed` means it is still being voted on by validators.
-- **Token Accounts:** Solana creates specific sub-accounts for tokens (SPL). Ensure the user is looking at their SPL token balance, not just their native SOL balance.
-
-## Mempool.space (Bitcoin)
-- **Unconfirmed / ETA:** Use the mempool block visualization to see where the user's transaction is sitting. If their sat/vB fee is lower than the current median, tell them the ETA could be several hours.
-- If an address triggers a high-risk score on Chainalysis/TRM Labs, **DO NOT PROCESS**.
-- Escalate the Order ID and Destination Address to the Compliance Officer.
-- Inform the user: *"Your transaction is undergoing a routine manual security review in accordance with regulatory requirements."*
